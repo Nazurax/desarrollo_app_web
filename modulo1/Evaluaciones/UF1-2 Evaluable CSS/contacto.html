@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC&C - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo AC&C" class="logo">
+        </div>
+        <h1>AC&C Cocinas y Reformas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-container">
+            <h2>Contacta con nosotros</h2>
+            <p>Rellena el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="presupuesto">Solicitar presupuesto</option>
+                        <option value="informacion">Información general</option>
+                        <option value="cita">Concertar cita</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="checkbox" id="politica" name="politica" required>
+                    <label for="politica">He leído y acepto la política de privacidad</label>
+                </div>
+                
+                <div class="form-button">
+                    <button type="submit">Enviar mensaje</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AC&C Cocinas y Reformas. Todos los derechos reservados.</p>
+        <p>www.acycsa.com</p>
+    </footer>
+</body>
+</html>

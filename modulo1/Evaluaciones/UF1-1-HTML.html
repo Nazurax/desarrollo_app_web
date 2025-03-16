@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario en Tabla</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        td, th {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-item {
+            margin: 5px 0;
+        }
+        .form-title {
+            text-align: center;
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .submit-button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2" class="form-title">Formulario de Registro</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form action="#" method="post">
+                    <table width="100%">
+                        <tr>
+                            <td><label for="nombre">Nombre:</label></td>
+                            <td><input type="text" id="nombre" name="nombre" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fecha_nacimiento">Fecha de nacimiento:</label></td>
+                            <td><input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Cursos de interés:</label></td>
+                            <td>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="python" name="cursos[]" value="Python">
+                                        <label for="python">Python</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="php" name="cursos[]" value="PHP">
+                                        <label for="php">PHP</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="javascript" name="cursos[]" value="JavaScript">
+                                        <label for="javascript">JavaScript</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="cpp" name="cursos[]" value="C++">
+                                        <label for="cpp">C++</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="nivel_estudios">Nivel de estudios:</label></td>
+                            <td>
+                                <select id="nivel_estudios" name="nivel_estudios" required>
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="basico">Básico</option>
+                                    <option value="medio">Medio</option>
+                                    <option value="superior">Superior</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="nivel_ingles">Nivel de inglés (0-10):</label></td>
+                            <td><input type="number" id="nivel_ingles" name="nivel_ingles" min="0" max="10" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="submit-button">
+                                <input type="submit" value="Enviar">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
